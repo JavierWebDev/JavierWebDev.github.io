@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalyze.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Foods Website</title>
 </head>
 <body>
     <header>
-        <div class="titleHeader">
-            <h2>Foods</h2>
-        </div>
-
         <nav class="navBar">
-            <a href="index.html">Home</a>
-            <a href="#about">About</a>
-            <a href="#food">Menu</a>
-            <a href="#services">Service</a>
-            <a href="#">Contact</a>
+            <div class="titleHeader">
+                <h2>Foods</h2>
+            </div>
+
+            <a href="#menu" class="nav__target">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAT0lEQVRIS2NkoDFgpLH5DKMWEAxh+gfRfyAg6Cw8ChiBAFkawwc0t4AS12PTS/84oLkPaB4HNLeA5kE09C2geRzQ3IKhHwejPkAPAZqXpgBrVBgZUOWgBgAAAABJRU5ErkJggg=="/>
+            </a>
+
+            <div id="menu" class="links">
+                <a class="nav__link" href="index.html">Home</a>
+                <a class="nav__link" href="#about">About</a>
+                <a class="nav__link" href="#food">Menu</a>
+                <a class="nav__link" href="#services">Service</a>
+                <a class="nav__link" href="#">Contact</a>
+            </div>
         </nav>
     </header>
     

@@ -39,23 +39,31 @@ p {
 
 header {
     margin: 0;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 100px;
+    height: auto;
 }
 
 .titleHeader {
+    min-width: 50%;
     font-size: 1.5rem;
-    padding-left: 3%;
+    
 }
 
 .navBar {
-    width: 40%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     margin: 0;
+}
+.links {
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 a {
@@ -66,16 +74,40 @@ a {
     transition: transform 0.3s ease-in-out;
 }
 a:hover {
-    color: var(--primaryColor);
-    background-color: var(--white);
+    color: var(--white);
+    background-color: var(--primaryColor);
     border-radius: .5rem;
     transform: scale(1.1);
     padding: 10px;
 }
 
-@media screen {
+
+@media screen and (max-width: 600px) {
+    header {
+        text-align: center;
+    }
+    .navBar {
+        height: max-content;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
     
+    .links {
+        position: fixed;
+        display: grid;
+        background-color: var(--colorMovile);
+        place-items: center;
+        clip-path: circle(0% at top left);
+        transition: clip-path .4s;
+    }
+    
+    .links:target {
+        clip-path: circle(150% at top left);
+    }
 }
+
+
 
 /* GENERAL STYLES */
 
