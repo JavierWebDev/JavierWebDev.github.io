@@ -60,19 +60,21 @@ header {
     margin: 0;
 }
 .links {
-    max-width: 30%;
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 a {
-    padding: 10px;
     text-decoration: none;
     color: var(--white);
     font-size: 1.1rem;
     transition: transform 0.3s ease-in-out;
 }
+
+
+
 a:hover {
     color: var(--white);
     background-color: var(--primaryColor);
@@ -81,30 +83,53 @@ a:hover {
     padding: 10px;
 }
 
+.nav__target {
+    visibility: hidden;
+}
+
 
 @media screen and (max-width: 600px) {
     header {
         text-align: center;
     }
+
+    .titleHeader {
+        font-size: 1rem;
+    }
     .navBar {
-        height: max-content;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        height: min-content;
+        display: flex;
+        justify-content: space-between;
+
     }
     
     .links {
         position: fixed;
-        display: grid;
+        top: 90px;
+        align-items: center;
+        justify-content: center;
         background-color: var(--colorMovile);
-        place-items: center;
         clip-path: circle(0% at top left);
         transition: clip-path .4s;
+        flex-direction: column;
+        width: 100%;
     }
     
     .links:target {
         clip-path: circle(150% at top left);
     }
+    .nav__target {
+        visibility: visible;
+        justify-content: left;
+        padding: 10px;
+
+    }
+
+    .nav__link {
+        padding: 10px;
+        width: 100%;
+    }
+
 }
 
 
@@ -168,6 +193,27 @@ button:hover {
     margin: 0;
 }
 
+@media screen and (max-width: 600px) {
+    .sections {
+        font-size: 1rem;
+        width: 80%;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        text-align: center;
+    }
+
+    .titleHome {
+        font-size: 3rem;
+    }
+
+    .pHome {
+        font-weight: 400;
+    }
+    .contImg {
+        order: 1;
+    }
+}
+
 /* ABOUT US */ 
 
 .subtitleAbout {
@@ -223,6 +269,16 @@ button:hover {
     width: 25px;
 }
 
+@media screen and (max-width: 600px) {
+    .foodMenu {
+        flex-direction: column;
+    }
+
+    .subtitleAbout {
+        font-size: 1.7rem;
+    }
+}
+
 /* SERVICES */
 .srvMenu {
     margin: 0;
@@ -249,6 +305,12 @@ button:hover {
 .txtService {
     color: var(--white);
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .srvMenu {
+        flex-direction: column;
+    }
 }
 
 /* FINAL SECTION */
@@ -290,9 +352,9 @@ button:hover {
     border-bottom: 3px solid var(--primaryColor);
 }
 .contInfo {
-    padding-top: 2rem;
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
 .txtFooter {
@@ -312,4 +374,18 @@ button:hover {
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .contFooter {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .contInfo {
+        padding: 20px;
+    }
+    .linkkk {
+        padding: 10px;
+    }
 }
