@@ -218,7 +218,7 @@ button:hover {
         max-width: 100%;
     }
     .imgHome {
-        max-width: fit-content;
+        max-width: 100%;
     }
 }
 
@@ -283,6 +283,9 @@ button:hover {
         width: 100%;
         padding: 0;
     }
+    .itemFood {
+        max-width: 100%;
+    }
 
     .subtitleAbout {
         font-size: 1.7rem;
@@ -341,6 +344,12 @@ button:hover {
     padding: 5rem;
 
     border: double .5rem var(--back);
+}
+
+@media screen and (max-width: 600px) {
+    .contEnd {
+        width: 90%;
+    }
 }
 
 /* FOOTER */
