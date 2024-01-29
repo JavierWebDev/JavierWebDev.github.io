@@ -105,7 +105,6 @@ a:hover {
         height: min-content;
         display: flex;
         justify-content: space-between;
-
     }
     
     .links {
@@ -216,6 +215,10 @@ button:hover {
     }
     .contImg {
         order: 1;
+        max-width: 100%;
+    }
+    .imgHome {
+        max-width: fit-content;
     }
 }
 
@@ -278,6 +281,7 @@ button:hover {
     .foodMenu {
         flex-direction: column;
         width: 100%;
+        padding: 0;
     }
 
     .subtitleAbout {
